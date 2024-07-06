@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Site Saver</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="interface" id="interface-1">
+      <form id="save-form-1">
+        <div class="form-row">
+          <div class="form-group">
+            <select id="group-select-1"></select>
+          </div>
+          <div class="form-group">
+            <input type="text" id="group-input-1" name="group" placeholder="Enter new group">
+          </div>
+        </div>
+        <button type="submit" class="small-button">Save Site</button>
+      </form>
+      <div id="message-1" style="color: red; margin-top: 10px;"></div>
+
+      <!-- Search Box -->
+      <form id="search-form-1">
+        <input type="text" id="search-input-1" placeholder="Search by keyword">
+      </form>
+
+      <ul id="groups-list-1"></ul>
+    </div>
+
+    <div class="interface" id="interface-2">
+      <div class="daily-goal">
+        <input type="number" id="daily-goal-input" placeholder="Set daily goal">
+        <button id="set-daily-goal-button">Set Goal</button>
+      </div>
+      <div class="calendar">
+        <div class="calendar__opts">
+          <select name="calendar__month" id="calendar__month">
+            <option value="0">Jan</option>
+            <option value="1">Feb</option>
+            <option value="2">Mar</option>
+            <option value="3">Apr</option>
+            <option value="4">May</option>
+            <option value="5" selected>Jun</option>
+            <option value="6">Jul</option>
+            <option value="7">Aug</option>
+            <option value="8">Sep</option>
+            <option value="9">Oct</option>
+            <option value="10">Nov</option>
+            <option value="11">Dec</option>
+          </select>
+
+          <select name="calendar__year" id="calendar__year">
+            <option selected>2024</option>
+            <option>2025</option>
+            <option>2026</option>
+          </select>
+        </div>
+
+        <div class="calendar__body">
+          <div class="calendar__days">
+            <div>SUN</div>
+            <div>MON</div>
+            <div>TUE</div>
+            <div>WED</div>
+            <div>THU</div>
+            <div>FRI</div>
+            <div>SAT</div>
+          </div>
+
+          <div class="calendar__dates" id="calendar__dates">
+            <!-- Predefined placeholders for each day of the month will be inserted by JavaScript -->
+          </div>
+        </div>
+      </div>
+      <div id="flagged-items-container"></div>
+    </div>
+    
+  
+
+    <div class="footer-buttons">
+      <button id="switch-to-interface-1" class="nav-button">Items</button>
+      <button id="switch-to-interface-2" class="nav-button">Calendar</button>
+      <button id="export-button-1" class="nav-button">Export Sites</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
